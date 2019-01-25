@@ -166,9 +166,9 @@ def day(current_user, action_point = 0)
     action_point = 0
   end
   back = [
-    {"continue" => -> do puts "ok" end } ]
+    {"Continue" => -> do puts "" end } ]
       prompt = TTY::Prompt.new
-      prompt.select("Click continue when you are finished reading", back)
+      prompt.select("Click 'Continue' when you are finished reading.", back)
     system "clear"
     day(current_user, action_point)
 end
