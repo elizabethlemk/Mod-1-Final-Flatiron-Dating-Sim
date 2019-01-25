@@ -61,6 +61,7 @@ def load_game
   if User.all.length == 0
     puts "There are no more files!"
     sleep(1)
+    system "clear"
     return nil
   end
   user_choices = User.all.map{ |obj| obj.name}
@@ -68,6 +69,7 @@ def load_game
   choice = prompt.select("Choose a file", user_choices)
   current_user = User.all.find { |obj| obj.name == choice}
   puts "You've chosen #{current_user.name}"
+  sleep(1)
   if current_user.total_days == 0
     system "clear"
     goal_message
@@ -150,6 +152,7 @@ def day(current_user, action_point = 0)
   elsif answer == 7
     diary(current_user)
   elsif answer == 8
+    system "clear"
     return welcome
   end
   if check == "won" || check == "lose"
@@ -162,6 +165,10 @@ def day(current_user, action_point = 0)
     current_user.total_days += 1
     action_point = 0
   end
+  back = [
+    {"continue" => -> do puts "ok" end } ]
+      prompt = TTY::Prompt.new
+      prompt.select("Click continue when you are finished reading", back)
     system "clear"
     day(current_user, action_point)
 end
@@ -202,7 +209,7 @@ def diary(current_user)
   end
   puts " "
   back = [
-    {"Exit" => -> do return nil end } ]
+    {"Back" => -> do return nil end } ]
   prompt = TTY::Prompt.new
   prompt.select("Click back when you are finished viewing your diary", back)
 end
