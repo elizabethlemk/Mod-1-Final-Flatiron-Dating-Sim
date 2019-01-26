@@ -41,6 +41,9 @@ After cloning be sure to run this in your terminal
 3) Everyone has different tastes.
 
 - Contributors -
+
 Jonathan Chan https://github.com/ParmeJon
+
 Elizabeth Le https://github.com/elizabethlemk
+
 Jesus Gonzalez https://github.com/jesusg1012
