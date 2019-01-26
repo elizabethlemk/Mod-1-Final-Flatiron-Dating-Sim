@@ -102,6 +102,9 @@ end
 #-----------------------------------------------------------------------#
 
 def day(current_user, action_point = 0)
+  if current_user.total_days >=30
+    lose_game(current_user)
+  end
   current_user.save
   choices = [
     {name: 'Go to work', value: 1},
@@ -318,7 +321,7 @@ def flirt(current_user)
   pid = fork{ exec 'afplay', "./sounds/flirt_sound.mp3" }
   prompt = TTY::Prompt.new
   lovers = true_names(current_user)
-  choice = prompt.select("Who do you want to flirt with?", lovers)
+  choice = prompt.select("Who do you want to text?", lovers)
   choice_id = Lover.all.find { |lovers| lovers.name == choice }
   pts = affection_adder(current_user, Lover.first)
   sleep(1)
