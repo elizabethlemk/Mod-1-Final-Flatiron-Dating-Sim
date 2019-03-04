@@ -1,6 +1,7 @@
 
 ![alt text](https://github.com/elizabethlemk/Mod-1-Final-Flatiron-Dating-Sim/blob/master/Screen%20Shot%202019-01-25%20at%209.38.32%20PM.png)
 ###Description
+
 This is the "Flatiron Dating Sim" game. In this game you are creating
 your character with randomly generated stats. Life is not fair sometimes. You have 30 days to find a lover to bring to prom.
 
@@ -32,6 +33,7 @@ With this game you can compete with your friends and see who can find a lover fo
 
 
 ###Installation
+
 Clone the repo here:
 
 After cloning be sure to run this in your terminal
@@ -41,14 +43,17 @@ After cloning be sure to run this in your terminal
 4) ruby bin/run.rb
 
 ###General Dating Philosophies Applied
+
 1) Work on yourself first before trying to date.
 2) Love isn't easy; it takes time and effort.
 3) Everyone has different tastes.
 
 ###Built With
+
 Ruby
 
 ###Contributors
+
 
 Jonathan Chan https://github.com/ParmeJon
 
