@@ -31,7 +31,6 @@ With this game you can compete with your friends and see who can find a lover fo
 
 
 
-
 ###Installation
 Clone the repo here:
 
